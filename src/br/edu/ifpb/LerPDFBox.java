@@ -15,11 +15,11 @@ import org.apache.pdfbox.text.PDFTextStripper;
 public class LerPDFBox {
 
 	public void read() {
-		System.out.println("Inicio");
+		
 		PDFTextStripper pdfStripper = null;
 		PDDocument pdDoc = null;
 		COSDocument cosDoc = null;
-		File file = new File("C:\\Users\\wemerson\\Desktop\\Lista_-_Cap_05.pdf");
+		File file = new File("arquivo.pdf");
 		try {
 			PDFParser parser = new PDFParser(new RandomAccessBufferedFileInputStream(file));
 			parser.parse();
@@ -45,7 +45,7 @@ public class LerPDFBox {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.println("Fim");
+		
 	}
 	
 	public static void main(String[] args) {
